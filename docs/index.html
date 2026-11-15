@@ -134,15 +134,83 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   .stat{border-right:0;border-bottom:1px solid var(--line)}
   h1{font-size:42px}
 }
-.gate{display:grid;grid-template-columns:1.35fr .85fr;gap:26px;align-items:center;border:1px solid var(--line);border-radius:20px;padding:26px;background:linear-gradient(135deg,rgba(42,157,143,.12),rgba(69,123,157,.08));margin:22px 0 24px}.gate-badge{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--accent);border:1px solid rgba(42,157,143,.35);padding:6px 10px;border-radius:999px;margin-bottom:12px}.gate-actions{display:flex;flex-direction:column;gap:10px;align-items:stretch}.version.private{border-style:dashed;background:linear-gradient(180deg,rgba(11,34,43,.55),rgba(6,20,27,.7))}.version .state{font-family:var(--mono);font-size:9px;letter-spacing:.12em;padding:4px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}.state.pub{color:#2A9D8F;border-color:rgba(42,157,143,.4);background:rgba(42,157,143,.08)}.state.priv{color:#9ab;border-color:rgba(91,124,153,.45);background:rgba(91,124,153,.08)}.private-link{color:#9ab;cursor:pointer}@media(max-width:820px){.gate{grid-template-columns:1fr}}</style>
+
+/* ── Contenido heredado del proyecto original, en clave sobria ── */
+.rich{max-width:78ch}
+.rich p{margin:0 0 14px;color:#c3d4da}
+.rich h3{margin:26px 0 10px;font-size:19px;letter-spacing:-.02em}
+.rich h4{margin:22px 0 8px;font-size:15px;letter-spacing:-.01em}
+.rich ul,.rich ol{margin:0 0 16px;padding-left:22px;color:#c3d4da}
+.rich li{margin:0 0 6px}
+.rich figure{margin:22px 0;border:1px solid var(--line);border-radius:16px;padding:10px;background:rgba(11,34,43,.5)}
+.rich figure img{width:100%;display:block;border-radius:10px}
+.rich figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:9px;line-height:1.5}
+.rich .table-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:12px}
+.rich table{border-collapse:collapse;width:100%;font-size:13.5px}
+.rich th,.rich td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.rich th{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:rgba(11,34,43,.6)}
+.rich tr:last-child td{border-bottom:0}
+.rich pre{margin:18px 0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#04141a;overflow-x:auto;font-family:var(--mono);font-size:12px;line-height:1.6;color:#cfe3e8}
+.rich code{font-family:var(--mono);font-size:.92em}
+.rich .note{margin:18px 0;padding:13px 16px;border-left:2px solid var(--accent);background:rgba(42,157,143,.07);color:#c3d4da;font-size:14px}
+.rich .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.rich .card-grid .card{margin:0}
+
+
+.rich h3{margin:26px 0 8px}
+.rich p{margin:0 0 14px;color:var(--muted);line-height:1.7}
+.fail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:6px}
+.fail{background:rgba(11,34,43,.55);border:1px solid var(--line);border-radius:14px;padding:18px}
+.fail .v{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--warm,#D6A86A)}
+.fail h3{font-size:16px;margin:8px 0 6px}
+.fail p{font-size:14px;margin:0;color:var(--muted)}
+.rating-head{display:flex;align-items:center;gap:20px;margin:6px 0 18px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(11,34,43,.55)}
+.rating-avg{font-family:var(--mono);font-size:40px;line-height:1;color:var(--accent)}
+.rating-avg small{font-size:14px;color:var(--muted)}
+.rating-head p{margin:4px 0 0;font-size:14px;color:var(--muted);max-width:70ch}
+.rating{display:grid;gap:2px}
+.rating-row{display:grid;grid-template-columns:165px minmax(90px,1fr) 48px;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.rating-row:last-child{border-bottom:0}
+.rating-name{font-size:13.5px;font-weight:600}
+.rating-bar{height:6px;border-radius:99px;background:rgba(148,190,200,.14);overflow:hidden}
+.rating-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.rating-score{font-family:var(--mono);font-size:12.5px;color:var(--accent);text-align:right}
+.rating-note{grid-column:2/-1;font-size:12.5px;color:var(--muted);margin-top:-4px}
+.faq{display:grid;gap:0;margin-top:4px}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";display:inline-block;width:18px;color:var(--accent);font-family:var(--mono)}
+.faq details[open] summary::before{content:"–"}
+.faq p{margin:10px 0 0 18px;font-size:14px;color:var(--muted)}
+@media(max-width:720px){
+  .fail-grid{grid-template-columns:1fr}
+  .rating-head{flex-direction:column;align-items:flex-start}
+  .rating-row{grid-template-columns:120px 1fr 44px}
+}
+
+
+.detail h2{margin:34px 0 10px;font-size:24px;letter-spacing:-.02em}
+.detail h3{margin:24px 0 8px;font-size:17px}
+.detail p{margin:0 0 14px;color:var(--muted);line-height:1.75}
+.detail ul,.detail ol{margin:0 0 16px 20px;color:var(--muted)}
+.detail li{margin:6px 0}
+.detail table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+.detail th,.detail td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+.detail th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.detail pre{background:rgba(6,20,27,.75);border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:13px}
+.detail code{font-family:var(--mono);font-size:.92em}
+.detail img{max-width:100%;border-radius:12px;border:1px solid var(--line)}
+.detail blockquote{border-left:2px solid var(--accent);margin:14px 0;padding:2px 0 2px 16px;color:var(--muted)}
+
+</style>
 <link rel="stylesheet" href="assets/community.css?v=1">
 </head>
 <body>
 <header class="nav"><div class="wrap nav-in">
   <a class="brand" href="/"><span class="brand-mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg></span><span>jmadasme<span style="color:var(--accent)">.</span>portfolio</span></a>
   <nav class="nav-links">
-    <a href="#proyecto">Proyecto</a><a href="#versiones">Versiones</a>
-      <a href="#acceso">Acceso</a><a href="#stack">Stack</a><a href="#docs">Docs</a><a href="#comunidad">Comunidad</a>
+    <a href="#proyecto">Proyecto</a><a href="#versiones">Versiones</a><a href="#stack">Stack</a><a href="#docs">Docs</a><a href="#comunidad">Comunidad</a>
     <a class="btn btn-ghost" style="padding:9px 15px" href="/iot/">← IoT</a>
   </nav>
 </div></header>
@@ -156,7 +224,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
       <a class="btn btn-primary" href="https://github.com/jmadasme/espnow-demos" target="_blank" rel="noopener">Ver el repositorio <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-ghost" href="#versiones">Explorar versiones</a>
     </div>
-    <div class="badges"><span class="badge">MIT</span><span class="badge">IoT &amp; Hardware</span><span class="badge">3 versiones · 2 privadas</span><span class="badge">GitHub Pages</span></div>
+    <div class="badges"><span class="badge">MIT</span><span class="badge">IoT &amp; Hardware</span><span class="badge">3 versiónes</span><span class="badge">GitHub Pages</span></div>
   </div>
   <div class="hero-visual">
     <div class="visual-frame"><img src="assets/architecture.svg" alt="Árbol de versiones de ESP-NOW Demos"></div>
@@ -165,7 +233,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   </div>
 </div></section>
 
-<section class="stats"><div class="wrap stats-grid"><div class="stat"><div class="stat-num">3</div><div class="stat-label">versiones</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">pública</div></div><div class="stat"><div class="stat-num">2</div><div class="stat-label">privadas</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">licencia</div></div></div></section>
+<section class="stats"><div class="wrap stats-grid"><div class="stat"><div class="stat-num">3</div><div class="stat-label">versiones</div></div><div class="stat"><div class="stat-num">9</div><div class="stat-label">nodos demo</div></div><div class="stat"><div class="stat-num">2</div><div class="stat-label">radios</div></div><div class="stat"><div class="stat-num">0</div><div class="stat-label">router</div></div></div></section>
 
 <section class="section" id="proyecto"><div class="wrap">
   <div class="section-head reveal"><div class="kicker">01 — El proyecto</div><h2>Qué resuelve</h2><p class="section-sub">Tres demos que muestran cómo conectar sensores en campo: una maleta con bridge y nueve nodos, un enlace ESP-NOW + LoRaWAN con dos firmwares y una red mixta ESP8266/ESP32.</p></div>
@@ -176,65 +244,1245 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
 </div></section>
 
 <section class="section" id="versiones"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">02 — Versiones</div><h2>Una puerta abierta. Dos bajo llave.</h2>
-  <p class="section-sub">La primera etapa queda libre para probar el camino. Las siguientes conservan el refinamiento, la depuración y el rendimiento: se comparten solo a quien las pide.</p></div>
-  <div class="gate reveal" id="acceso">
-    <div>
-      <span class="gate-badge">MODELO DE ACCESO</span>
-      <h3>3 versiones · 1 pública · 2 privadas</h3>
-      <p>La primera versión es gratuita y abierta. <strong>Última versión: privada.</strong> Las mejoras, optimizaciones y variantes de hardware no se regalan de forma anónima: se solicitan, se conversan y se entregan con un alcance claro.</p>
-    </div>
-    <div class="gate-actions">
-      <a class="btn btn-primary" href="https://github.com/jmadasme/espnow-demos/issues/new?template=solicitud-acceso.yml&title=Solicitud%20de%20acceso%20a%20versiones%20privadas" target="_blank" rel="noopener">Solicitar acceso / licencia</a>
-      <a class="btn btn-ghost" href="#docs">Ver README y documentación</a>
-    </div>
-  </div>
+  <div class="section-head reveal"><div class="kicker">02 — Versiones</div><h2>La historia, completa.</h2><p class="section-sub">Cada carpeta conserva una etapa del proyecto. No se borraron las anteriores: se pusieron en contexto.</p></div>
   <div class="versions"><article class="version reveal">
   <div class="version-top"><h3>espNowDemo</h3><span class="count">33 archivos</span></div>
-  <div style="margin-bottom:8px"><span class="state pub">PÚBLICA</span></div>
   <p>Maleta de demostración: bridge, nueve nodos de sensores y GUIs en Python; basada en netEspNow v1.1-fix1.</p>
-  <a href="versions/espNowDemo/" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</article><article class="version reveal private">
+  <a href="https://github.com/jmadasme/espnow-demos/tree/main/versions/espNowDemo" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</article><article class="version reveal">
   <div class="version-top"><h3>espNowDemoLoRaWAN1.1</h3><span class="count">7 archivos</span></div>
-  <div style="margin-bottom:8px"><span class="state priv">PRIVADA</span></div>
   <p>Dos firmwares que cooperan: ESP-NOW para el tramo local y LoRaWAN para el enlace largo.</p>
-  <a class="private-link" href="https://github.com/jmadasme/espnow-demos/issues/new?template=solicitud-acceso.yml&title=Solicitud%20de%20acceso%20a%20versiones%20privadas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Solicitar acceso</a>
-</article><article class="version reveal private">
+  <a href="https://github.com/jmadasme/espnow-demos/tree/main/versions/espNowDemoLoRaWAN1.1" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</article><article class="version reveal">
   <div class="version-top"><h3>red_espnow_8266_32</h3><span class="count">4 archivos</span></div>
-  <div style="margin-bottom:8px"><span class="state priv">PRIVADA</span></div>
   <p>Firmwares maestro y nodo para una red mixta de ESP8266 y ESP32.</p>
-  <a class="private-link" href="https://github.com/jmadasme/espnow-demos/issues/new?template=solicitud-acceso.yml&title=Solicitud%20de%20acceso%20a%20versiones%20privadas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Solicitar acceso</a>
+  <a href="https://github.com/jmadasme/espnow-demos/tree/main/versions/red_espnow_8266_32" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </article></div>
 </div></section>
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El concepto</div><h2>Qué es y por qué existe</h2></div><div class="rich reveal"><p>espnow-demos agrupa tres demostraciones de ESP-NOW pensadas para funcionar sin la WiFi del lugar ni servicios en la nube. La pieza principal es una red en estrella de nueve nodos ESP8266 —un bridge y ocho sensores— que se consulta desde una interfaz PyQt6 en un portátil; las otras dos versiones exploran un puente LoRaWAN y una red mixta ESP8266/ESP32.</p><p>Está dirigido a quien necesita una demo transportable para feria, aula o sala de reuniones, donde la red del edificio no es confiable. Importa porque muestra el ciclo completo con hardware barato: autodescubrimiento de MAC, tramas binarias compactas, sensores digitales, I2C y analógicos, y una GUI local. También deja a la vista los huecos: sin cifrado, sin watchdog y sin documentación en una de las variantes.</p></div></div></section>
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El proyecto en detalle</div><h2>Documentación preservada</h2><p class="section-sub">El README original de la versión de referencia, completo.</p></div><div class="detail rich reveal">
+<blockquote>
+<p><strong>Versión:</strong> netEspNow v1.1-fix1 · <strong>Topología:</strong> Estrella · <strong>Plataforma:</strong> ESP8266 (NodeMCU v3 / ESP-12E)</p>
+</blockquote>
+<p><strong>espNowDemo</strong> es una red de sensores inalámbrica basada en <strong>ESP-NOW</strong> pensada para
+<strong>ferias, demos y maletas didácticas</strong>. Un nodo <strong>Bridge (maestro)</strong> interroga
+secuencialmente a una serie de <strong>nodos sensores</strong> (esclavos) y muestra los datos por
+el puerto <strong>Serial</strong> (UART0, 115200 baud). El operador humano controla la red con
+comandos de texto.</p>
+<p>Sigue la filosofía <em>"simple y robusta"</em> de la versión v1.1:</p>
+<ul>
+<li>Sin gateway intermedio (el Bridge es el punto central).</li>
+<li>Sin cifrado ESP-NOW.</li>
+<li>Sin EEPROM (las MAC se aprenden por <strong>autodescubrimiento</strong> vía broadcast).</li>
+<li>Sin watchdog (si un nodo no responde, el Bridge hace <em>timeout</em> y sigue).</li>
+</ul>
+<blockquote>
+<p>🖥️ <strong>Panel de control (GUI):</strong> este proyecto incluye una aplicación de escritorio
+en Python (<code>espnow_gui.py</code>, PyQt6) para operar la red con tarjetas visuales por nodo,
+botón de consulta circular y efecto hover. Ver <a href="https://github.com/jmadasme/espnow-demos/blob/main/versions/espNowDemo/docs/gui.md">docs/gui.md</a>.</p>
+<p>🚰 <strong>Extensión Zigbee (GUI de válvulas):</strong> <code>valvulas_gui.py</code> (+ <code>valvulas.py</code>), una
+GUI con el mismo estilo RAF que controla las válvulas de agua Zigbee (SONOFF SWV-NH)
+y el interruptor ON/OFF vía MQTT/Zigbee2MQTT. Se ejecuta en la Raspberry Pi que corre
+el broker (por defecto <code>127.0.0.1:1883</code>, configurable): <code>python3 valvulas_gui.py</code>.
+Requiere <code>pip install paho-mqtt</code> + PyQt6.</p>
+<p>📡 <strong>Nodo LoRaWAN (GUI de radio):</strong> <code>cubecell_gui.py</code> (PyQt6) es el panel de escritorio
+estilo RAF para operar el nodo <strong>Heltec CubeCell HTCC-AB01</strong> conectado por USB
+(CP2102, 9600 8N1): terminal serial en vivo, envío de datos (HEX o ASCII), recepción
+de downlinks e indicadores de sesión/radio. Detección automática del puerto del nodo.
+Ejecutar: <code>python3 cubecell_gui.py</code>. Ver <a href="https://github.com/jmadasme/espnow-demos/blob/main/versions/espNowDemo/docs/gui_cubecell.md">docs/gui_cubecell.md</a>.</p>
+</blockquote>
+<hr/>
+<h2 id="indice">Índice</h2>
+<ol>
+<li><a href="#descripción-general">Descripción general</a></li>
+<li><a href="#placa-objetivo-y-especificaciones">Placa objetivo y especificaciones</a></li>
+<li><a href="#principio-de-funcionamiento">Principio de funcionamiento</a></li>
+<li><a href="#forma-de-operar-comandos">Forma de operar (comandos)</a></li>
+<li><a href="#pinout-tabla-de-pines">Pinout (tabla de pines)</a></li>
+<li><a href="#diagrama-de-conexión">Diagrama de conexión</a></li>
+<li><a href="#compilación-y-carga">Compilación y carga</a></li>
+<li><a href="#ejemplos-de-uso">Ejemplos de uso</a></li>
+<li><a href="#calibración">Calibración</a></li>
+<li><a href="#advertencias-y-precauciones">Advertencias y precauciones</a></li>
+</ol>
+<hr/>
+<h2 id="descripcion-general">Descripción general</h2>
+<p>La red está formada por <strong>9 firmwares</strong>, todos para <strong>ESP8266 NodeMCU v3 (ESP-12E)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Firmware</th>
+<th>Rol</th>
+<th>ID</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>firmware_bridge</code></td>
+<td>Maestro/Bridge</td>
+<td>5 (self)</td>
+<td>Interroga a los nodos, muestra datos por Serial, gestiona comandos.</td>
+</tr>
+<tr>
+<td><code>firmware_nodo_0</code> … <code>firmware_nodo_4</code></td>
+<td>Esclavo universal</td>
+<td>0…4</td>
+<td>Lee 1 entrada digital + 1 entrada analógica (ADC).</td>
+</tr>
+<tr>
+<td><code>firmware_nodo_6</code></td>
+<td>Esclavo DS18B20</td>
+<td>6</td>
+<td>Lee temperatura con DS18B20 (OneWire).</td>
+</tr>
+<tr>
+<td><code>firmware_nodo_7</code></td>
+<td>Esclavo GY-906</td>
+<td>7</td>
+<td>Lee temperatura IR sin contacto con MLX90614 (I2C).</td>
+</tr>
+<tr>
+<td><code>firmware_nodo_8</code></td>
+<td>Esclavo GY-61</td>
+<td>8</td>
+<td>Lee aceleración del eje X (ADXL335) y <strong>clasifica la vibración</strong> en tiempo real.</td>
+</tr>
+</tbody>
+</table>
+<p>Los <strong>5 nodos universales</strong> son exactamente el mismo código; solo cambia
+<code>#define NODE_ID</code>. Esto permite "clonar" un nodo genérico y cablearle distintos
+sensores físicos según la necesidad.</p>
+<h3 id="sensores-de-la-maleta-cableado-fisico">Sensores de la maleta (cableado físico)</h3>
+<p>El mapeo de sensores <strong>no está hardcodeado</strong> en el firmware: cualquier nodo universal
+puede leer cualquier sensor compatible. La asignación recomendada para la maleta es:</p>
+<table>
+<thead>
+<tr>
+<th>Nodo</th>
+<th>Sensor</th>
+<th>Pin</th>
+<th>Tipo de lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Reed magnético <strong>MC-38</strong> (puerta)</td>
+<td>D2 (GPIO4)</td>
+<td>Digital (pull-up)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>PIR <strong>HC-SR501</strong> (movimiento)</td>
+<td>D2 (GPIO4)</td>
+<td>Digital</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>LDR</strong> (luz)</td>
+<td>A0</td>
+<td>Analógica (0–1023)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>MQ135</strong> (calidad de aire)</td>
+<td>A0</td>
+<td>Analógica (0–1023)</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>LM35 / TMP36</strong> (temperatura)</td>
+<td>A0</td>
+<td>Analógica (0–1023)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>DS18B20</strong> (temperatura, sonda acero)</td>
+<td>D2 (GPIO4)</td>
+<td>OneWire (digital)</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>GY-906 / MLX90614</strong> (temperatura IR sin contacto)</td>
+<td>D1 (GPIO5) + D2 (GPIO4)</td>
+<td>I2C (dirección 0x5A)</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>GY-61 / ADXL335</strong> (acelerómetro 3 ejes / vibración)</td>
+<td>A0 (X_OUT)</td>
+<td>Analógica (eje X, 0–1023)</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="placa-objetivo-y-especificaciones">Placa objetivo y especificaciones</h2>
+<ul>
+<li><strong>Placa:</strong> NodeMCU v3 (módulo <strong>ESP-12E</strong>, chip ESP8266EX, conversor USB <strong>CP2102</strong>).</li>
+<li><strong>FQBN (arduino-cli / Arduino IDE):</strong> <code>esp8266:esp8266:nodemcuv2</code></li>
+<li><strong>CPU:</strong> Tensilica L106 32-bit @ 80 MHz (hasta 160 MHz).</li>
+<li><strong>RAM:</strong> ~80 KB disponibles para el usuario.</li>
+<li><strong>Flash:</strong> 4 MB (SPIFFS no utilizado en este proyecto).</li>
+<li><strong>WiFi:</strong> 802.11 b/g/n (2.4 GHz) — usado solo en modo <em>Station</em> para ESP-NOW (no se conecta a ningún AP).</li>
+<li><strong>GPIO digitales:</strong> hasta 11 utilizables; <strong>entradas de 3.3 V</strong> (¡NO toleran 5 V!).</li>
+<li><strong>ADC:</strong> 1 canal (A0), resolución 10 bits (0–1023), rango 0–1.0 V nativo.</li>
+<li><strong>Alimentación:</strong> 5 V por micro-USB (regulador interno a 3.3 V), pin <code>3V3</code>, o pin <code>VIN</code> (5–9 V). Lógica a 3.3 V.</li>
+<li><strong>Puerto Serial:</strong> UART0 a 115200 baud (pines TX/GPIO1 y RX/GPIO3).</li>
+</ul>
+<blockquote>
+<p>⚠️ El ADC del ESP8266 mide <strong>0 – 1.0 V</strong> de forma nativa. La placa NodeMCU suele
+incluir un divisor resistivo (220 kΩ / 100 kΩ) que amplía el rango a <strong>0 – 3.3 V</strong>.
+Ver <a href="#advertencias-y-precauciones">Advertencias y precauciones</a>.</p>
+</blockquote>
+<hr/>
+<h2 id="principio-de-funcionamiento">Principio de funcionamiento</h2>
+<p>La red usa una <strong>topología en estrella</strong> con un único maestro (Bridge):</p>
+<ol>
+<li>El <strong>Bridge</strong> envía un mensaje <em>request</em> (<code>msg_type=0</code>) dirigido a un <code>node_id</code>,
+   por broadcast <code>FF:FF:FF:FF:FF:FF</code> si desconoce su MAC, o directo si ya la aprendió.</li>
+<li>El <strong>nodo</strong> cuyo <code>node_id</code> coincide lee sus sensores <strong>en ese instante</strong> y responde
+   con un mensaje <em>response</em> (<code>msg_type=1</code> universal, <code>msg_type=2</code> DS18B20,
+   <code>msg_type=3</code> IR/GY-906 o <code>msg_type=4</code> acelerómetro/GY-61).</li>
+<li>El <strong>Bridge</strong> recibe la respuesta (en un <em>callback</em> ESP-NOW que corre en contexto
+   ISR), la copia a un buffer y la procesa en <code>loop()</code>.</li>
+<li>Si no llega respuesta en <strong>2000 ms</strong>, se declara <em>timeout</em> y se pasa al siguiente nodo.</li>
+<li>El ciclo se repite cada <strong>3000 ms</strong> (auto-polling), o bajo demanda con <code>ping</code>.</li>
+</ol>
+<h3 id="protocolo-esp-now-estructuras-empaquetadas">Protocolo ESP-NOW (estructuras empaquetadas)</h3>
+<p><strong>Mensaje universal — 13 bytes</strong> (<code>EspNowMessage</code>), usado por Bridge y nodos 0–4:</p>
+<pre><code class="language-c">typedef struct __attribute__((packed)) {
+  uint8_t  msg_type;    // 0 = request (bridge→nodo), 1 = response (nodo→bridge)
+  uint8_t  node_id;     // ID destino/origen
+  uint8_t  gpio_state;  // estado digital 0/1
+  uint16_t adc_value;   // valor ADC 0–1023
+  uint32_t counter;     // contador correlativo del nodo
+  uint32_t uptime_ms;   // tiempo de actividad del nodo (ms)
+} EspNowMessage;
+</code></pre>
+<p><strong>Mensaje de sensor — 14 bytes</strong> (<code>EspNowSensorMessage</code> / <code>EspNowDhtMessage</code>), nodo 6:</p>
+<pre><code class="language-c">typedef struct __attribute__((packed)) {
+  uint8_t  msg_type;    // 2 = respuesta de sensor (nodo 6)
+  uint8_t  node_id;     // 6
+  int16_t  temp_x10;    // temperatura °C * 10  (ej: 245 = 24.5 °C)
+  int16_t  hum_x10;     // humedad % * 10        (ej: 455 = 45.5 %)
+  uint32_t counter;     // contador correlativo
+  uint32_t uptime_ms;   // tiempo de actividad (ms)
+} EspNowSensorMessage;
+</code></pre>
+<ul>
+<li><code>temp_x10 = -9999</code> → lectura inválida (sensor desconectado).</li>
+<li><code>hum_x10 = -9999</code> → <strong>N/A</strong> (el DS18B20 no mide humedad).</li>
+</ul>
+<p><strong>Mensaje IR (GY-906) — 14 bytes</strong> (<code>EspNowIrMessage</code>), nodo 7:</p>
+<pre><code class="language-c">typedef struct __attribute__((packed)) {
+  uint8_t  msg_type;       // 3 = respuesta IR (nodo 7)
+  uint8_t  node_id;        // 7
+  int16_t  obj_temp_x10;   // temperatura del objeto °C * 10
+  int16_t  amb_temp_x10;   // temperatura ambiente °C * 10
+  uint32_t counter;        // contador correlativo
+  uint32_t uptime_ms;      // tiempo de actividad (ms)
+} EspNowIrMessage;
+</code></pre>
+<ul>
+<li><code>obj_temp_x10 = -9999</code> o <code>amb_temp_x10 = -9999</code> → lectura inválida (error I2C).</li>
+</ul>
+<p><strong>Mensaje de aceleración/vibración (GY-61) — 16 bytes</strong> (<code>EspNowAccelMessage</code>), nodo 8:</p>
+<pre><code class="language-c">typedef struct __attribute__((packed)) {
+  uint8_t  msg_type;    // 4 = respuesta de aceleración (nodo 8)
+  uint8_t  node_id;     // 8
+  uint16_t accel_x;     // valor X actual (promedio de la ventana, 0–1023)
+  uint16_t vib_range;   // rango de vibración (max - min de la ventana, 0–1023)
+  uint8_t  vib_level;   // 0=reposo, 1=vibración baja, 2=media, 3=alta
+  uint8_t  reserved;    // reservado (0)
+  uint32_t counter;     // contador correlativo
+  uint32_t uptime_ms;   // tiempo de actividad (ms)
+} EspNowAccelMessage;
+</code></pre>
+<ul>
+<li><code>vib_level</code>: <strong>0</strong> = REPOSO, <strong>1</strong> = VIBRACIÓN BAJA, <strong>2</strong> = VIBRACIÓN MEDIA,
+  <strong>3</strong> = VIBRACIÓN ALTA (según el rango <code>max−min</code> de la ventana de muestras).</li>
+</ul>
+<h3 id="autodescubrimiento-de-mac">Autodescubrimiento de MAC</h3>
+<p>El Bridge arranca con los slots 0–4, 6, 7 y 8 en estado <strong>DESCONOCIDO</strong> (MAC en ceros).
+Cuando debe interrogar a un nodo desconocido, envía el request por <strong>broadcast</strong>. Al
+recibir la respuesta, <strong>aprende</strong> la MAC (del campo <code>mac</code> del callback), la guarda en la
+tabla y registra un <em>peer</em> directo. A partir de ahí, la comunicación es punto a punto.</p>
+<blockquote>
+<p>El slot <strong>5</strong> queda reservado para el propio Bridge (auto-identificación) y nunca se
+interroga.</p>
+</blockquote>
+<hr/>
+<h2 id="forma-de-operar-comandos">Forma de operar (comandos)</h2>
+<p>Conecta el Bridge por USB a un ordenador, abre el <strong>monitor Serial a 115200 baud</strong> y
+escribe los siguientes comandos (terminados con ENTER):</p>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>help</code> / <code>?</code></td>
+<td>Muestra la lista de comandos disponibles.</td>
+</tr>
+<tr>
+<td><code>ping &lt;id&gt;</code></td>
+<td>Interroga <strong>una vez</strong> a un nodo concreto (<code>0</code>-<code>4</code>, <code>6</code>-<code>8</code>).</td>
+</tr>
+<tr>
+<td><code>ping all</code></td>
+<td>Interroga a <strong>todos</strong> los nodos en secuencia.</td>
+</tr>
+<tr>
+<td><code>list</code></td>
+<td>Muestra la tabla de nodos y su estado (BRIDGE / CONOCIDO / DESCONOCIDO).</td>
+</tr>
+<tr>
+<td><code>stats</code></td>
+<td>Muestra estadísticas: requests, respuestas, timeouts y tasa de éxito.</td>
+</tr>
+<tr>
+<td><code>auto on</code></td>
+<td>Activa la interrogación automática (cada 3 s).</td>
+</tr>
+<tr>
+<td><code>auto off</code></td>
+<td>Desactiva la interrogación automática (solo responde a comandos).</td>
+</tr>
+</tbody>
+</table>
+<p>El Bridge arranca con <strong>auto-polling activado</strong> (<code>auto on</code> por defecto). Cada 30 s, si
+el auto-poll está activo, imprime automáticamente las estadísticas.</p>
+<hr/>
+<h2 id="pinout-tabla-de-pines">Pinout (tabla de pines)</h2>
+<h3 id="bridge-maestro-nodemcu-v3">Bridge (maestro) — NodeMCU v3</h3>
+<table>
+<thead>
+<tr>
+<th>Pin Arduino</th>
+<th>GPIO</th>
+<th>Modo</th>
+<th>Componente conectado</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D4</td>
+<td>GPIO2</td>
+<td>OUTPUT</td>
+<td>LED_BUILTIN (azul)</td>
+<td>Confirmación visual; <strong>activo en LOW</strong> (<code>LED_ON = LOW</code>).</td>
+</tr>
+<tr>
+<td>D9 / TX</td>
+<td>GPIO1</td>
+<td>OUTPUT</td>
+<td>UART0 TX</td>
+<td>Serial 115200 baud (hacia el ordenador).</td>
+</tr>
+<tr>
+<td>D10 / RX</td>
+<td>GPIO3</td>
+<td>INPUT</td>
+<td>UART0 RX</td>
+<td>Serial 115200 baud (desde el ordenador).</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>GPIO14</td>
+<td>—</td>
+<td><em>(reservado)</em></td>
+<td>Reservado SoftwareSerial RX (Fase 2, LoRaWAN).</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>GPIO12</td>
+<td>—</td>
+<td><em>(reservado)</em></td>
+<td>Reservado SoftwareSerial TX (Fase 2, LoRaWAN).</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>GPIO4</td>
+<td>—</td>
+<td><em>(sin uso)</em></td>
+<td>Solo los nodos leen sensores.</td>
+</tr>
+<tr>
+<td>A0</td>
+<td>—</td>
+<td>—</td>
+<td><em>(sin uso)</em></td>
+<td>Solo los nodos leen sensores.</td>
+</tr>
+<tr>
+<td>3V3</td>
+<td>—</td>
+<td>Power</td>
+<td>Alimentación 3.3 V</td>
+<td>Salida regulada.</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>—</td>
+<td>Power</td>
+<td>Tierra común</td>
+<td>—</td>
+</tr>
+<tr>
+<td>VIN/5V</td>
+<td>—</td>
+<td>Power</td>
+<td>Alimentación 5 V</td>
+<td>Entrada USB/regulador.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nodos-universales-04-nodemcu-v3">Nodos universales 0–4 — NodeMCU v3</h3>
+<table>
+<thead>
+<tr>
+<th>Pin Arduino</th>
+<th>GPIO</th>
+<th>Modo</th>
+<th>Componente conectado</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D4</td>
+<td>GPIO2</td>
+<td>OUTPUT</td>
+<td>LED_BUILTIN (azul)</td>
+<td><strong>Heartbeat</strong> (parpadea cada 1 s); activo en LOW.</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>GPIO4</td>
+<td>INPUT_PULLUP</td>
+<td>Sensor digital (reed / PIR)</td>
+<td>Pull-up interno; el sensor cierra a GND.</td>
+</tr>
+<tr>
+<td>A0</td>
+<td>—</td>
+<td>INPUT (analógico)</td>
+<td>Sensor analógico (LDR / MQ135 / LM35)</td>
+<td>Lectura 0–1023.</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>GPIO14</td>
+<td>—</td>
+<td><em>(reservado)</em></td>
+<td>Reservado SoftwareSerial RX (Fase 2).</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>GPIO12</td>
+<td>—</td>
+<td><em>(reservado)</em></td>
+<td>Reservado SoftwareSerial TX (Fase 2).</td>
+</tr>
+<tr>
+<td>D9 / TX</td>
+<td>GPIO1</td>
+<td>OUTPUT</td>
+<td>UART0 TX</td>
+<td>Serial de depuración (115200).</td>
+</tr>
+<tr>
+<td>D10 / RX</td>
+<td>GPIO3</td>
+<td>INPUT</td>
+<td>UART0 RX</td>
+<td>Serial de depuración (115200).</td>
+</tr>
+<tr>
+<td>3V3</td>
+<td>—</td>
+<td>Power</td>
+<td>Alimentación sensores</td>
+<td>—</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>—</td>
+<td>Power</td>
+<td>Tierra común</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nodo-6-ds18b20-nodemcu-v3">Nodo 6 (DS18B20) — NodeMCU v3</h3>
+<table>
+<thead>
+<tr>
+<th>Pin Arduino</th>
+<th>GPIO</th>
+<th>Modo</th>
+<th>Componente conectado</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D2</td>
+<td>GPIO4</td>
+<td>INPUT</td>
+<td><strong>DS18B20 DATA</strong></td>
+<td>Bus OneWire; con pull-up 4.7 kΩ a 3V3.</td>
+</tr>
+<tr>
+<td>3V3</td>
+<td>—</td>
+<td>Power</td>
+<td>DS18B20 VCC (rojo)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>—</td>
+<td>Power</td>
+<td>DS18B20 GND (negro)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>GPIO2</td>
+<td>—</td>
+<td><em>(libre)</em></td>
+<td>El nodo 6 <strong>no</strong> usa LED; queda disponible.</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>GPIO14</td>
+<td>—</td>
+<td><em>(reservado)</em></td>
+<td>Reservado SoftwareSerial RX (Fase 2).</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>GPIO12</td>
+<td>—</td>
+<td><em>(reservado)</em></td>
+<td>Reservado SoftwareSerial TX (Fase 2).</td>
+</tr>
+<tr>
+<td>D9 / TX</td>
+<td>GPIO1</td>
+<td>OUTPUT</td>
+<td>UART0 TX</td>
+<td>Serial de depuración (115200).</td>
+</tr>
+<tr>
+<td>D10 / RX</td>
+<td>GPIO3</td>
+<td>INPUT</td>
+<td>UART0 RX</td>
+<td>Serial de depuración (115200).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nodo-7-gy-906-mlx90614-nodemcu-v3">Nodo 7 (GY-906 / MLX90614) — NodeMCU v3</h3>
+<table>
+<thead>
+<tr>
+<th>Pin Arduino</th>
+<th>GPIO</th>
+<th>Modo</th>
+<th>Componente conectado</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D2</td>
+<td>GPIO4</td>
+<td>I2C SDA</td>
+<td><strong>GY-906 SDA</strong></td>
+<td>Bus I2C; el módulo trae pull-ups.</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>GPIO5</td>
+<td>I2C SCL</td>
+<td><strong>GY-906 SCL</strong></td>
+<td>Bus I2C; el módulo trae pull-ups.</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>GPIO2</td>
+<td>OUTPUT</td>
+<td>LED_BUILTIN (azul)</td>
+<td><strong>Heartbeat</strong> (parpadea cada 1 s); activo en LOW.</td>
+</tr>
+<tr>
+<td>3V3</td>
+<td>—</td>
+<td>Power</td>
+<td>GY-906 VIN</td>
+<td>El módulo regula a 3.3 V internamente.</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>—</td>
+<td>Power</td>
+<td>GY-906 GND</td>
+<td>Tierra común.</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>GPIO14</td>
+<td>—</td>
+<td><em>(reservado)</em></td>
+<td>Reservado SoftwareSerial RX (Fase 2).</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>GPIO12</td>
+<td>—</td>
+<td><em>(reservado)</em></td>
+<td>Reservado SoftwareSerial TX (Fase 2).</td>
+</tr>
+<tr>
+<td>D9 / TX</td>
+<td>GPIO1</td>
+<td>OUTPUT</td>
+<td>UART0 TX</td>
+<td>Serial de depuración (115200).</td>
+</tr>
+<tr>
+<td>D10 / RX</td>
+<td>GPIO3</td>
+<td>INPUT</td>
+<td>UART0 RX</td>
+<td>Serial de depuración (115200).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nodo-8-gy-61-adxl335-nodemcu-v3">Nodo 8 (GY-61 / ADXL335) — NodeMCU v3</h3>
+<table>
+<thead>
+<tr>
+<th>Pin Arduino</th>
+<th>GPIO</th>
+<th>Modo</th>
+<th>Componente conectado</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A0</td>
+<td>—</td>
+<td>INPUT (analógico)</td>
+<td><strong>GY-61 X_OUT</strong></td>
+<td>Salida del eje X del ADXL335 (0–1023).</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>GPIO2</td>
+<td>OUTPUT</td>
+<td>LED_BUILTIN (azul)</td>
+<td><strong>Heartbeat</strong> (parpadea cada 1 s); activo en LOW.</td>
+</tr>
+<tr>
+<td>3V3</td>
+<td>—</td>
+<td>Power</td>
+<td>GY-61 VCC</td>
+<td>El ADXL335 debe alimentarse a <strong>3.3 V</strong> (ver precauciones).</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>—</td>
+<td>Power</td>
+<td>GY-61 GND</td>
+<td>Tierra común.</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>GPIO14</td>
+<td>—</td>
+<td><em>(reservado)</em></td>
+<td>Reservado SoftwareSerial RX (Fase 2).</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>GPIO12</td>
+<td>—</td>
+<td><em>(reservado)</em></td>
+<td>Reservado SoftwareSerial TX (Fase 2).</td>
+</tr>
+<tr>
+<td>D9 / TX</td>
+<td>GPIO1</td>
+<td>OUTPUT</td>
+<td>UART0 TX</td>
+<td>Serial de depuración (115200).</td>
+</tr>
+<tr>
+<td>D10 / RX</td>
+<td>GPIO3</td>
+<td>INPUT</td>
+<td>UART0 RX</td>
+<td>Serial de depuración (115200).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Ejes Y y Z:</strong> el módulo GY-61 expone <code>X_OUT</code>, <code>Y_OUT</code> y <code>Z_OUT</code>, pero el
+ESP8266 <strong>solo tiene un ADC</strong> (A0). Por eso este nodo monitoriza únicamente el <strong>eje X</strong>.
+Para medir otro eje, cablea <code>Y_OUT</code> o <code>Z_OUT</code> a A0 (manteniendo el resto igual).</p>
+</blockquote>
+<h3 id="tabla-de-macs-reales-tarjetas-utilizadas">Tabla de MACs reales (tarjetas utilizadas)</h3>
+<table>
+<thead>
+<tr>
+<th>Dispositivo</th>
+<th>MAC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bridge</td>
+<td><code>48:3F:DA:05:86:36</code></td>
+</tr>
+<tr>
+<td>Nodo 0</td>
+<td><code>84:F3:EB:7C:99:1E</code></td>
+</tr>
+<tr>
+<td>Nodo 1</td>
+<td><code>80:7D:3A:2B:E3:59</code></td>
+</tr>
+<tr>
+<td>Nodo 2</td>
+<td><code>8C:AA:B5:0F:39:7F</code></td>
+</tr>
+<tr>
+<td>Nodo 3</td>
+<td><code>50:02:91:DE:0D:7B</code></td>
+</tr>
+<tr>
+<td>Nodo 4</td>
+<td><code>48:3F:DA:AA:8E:6D</code></td>
+</tr>
+<tr>
+<td>Nodo 6</td>
+<td><code>48:3F:DA:05:FC:85</code></td>
+</tr>
+<tr>
+<td>Nodo 7</td>
+<td><code>E0:98:06:23:BA:E9</code></td>
+</tr>
+<tr>
+<td>Nodo 8</td>
+<td><code>48:3F:DA:05:9C:C8</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>ℹ️ Las MAC no necesitan estar hardcodeadas: el Bridge las aprende por
+autodescubrimiento. La tabla es útil para verificación manual.</p>
+</blockquote>
+<hr/>
+<h2 id="diagrama-de-conexion">Diagrama de conexión</h2>
+<p>A continuación se describe, sensor por sensor, cómo cablear cada nodo de la maleta.
+Todas las conexiones se hacen sobre la <strong>NodeMCU v3</strong> del nodo correspondiente.</p>
+<h3 id="nodo-0-reed-magnetico-mc-38-deteccion-de-puertaventana">Nodo 0 — Reed magnético MC-38 (detección de puerta/ventana)</h3>
+<pre><code>                NodeMCU v3 (nodo 0)
+                    ┌─────────────┐
+ MC-38 ── (A) ──────┤ D2 (GPIO4)  │  INPUT_PULLUP
+ MC-38 ── (B) ──────┤ GND         │
+                    └─────────────┘
+</code></pre>
+<ul>
+<li><strong>MC-38</strong> tiene 2 cables (no polarizado). Uno a <strong>D2 (GPIO4)</strong> y el otro a <strong>GND</strong>.</li>
+<li>Con el imán cerca, el contacto se <strong>cierra</strong> y D2 lee <strong>LOW</strong> (0). Con la puerta
+  abierta, el contacto se abre y D2 lee <strong>HIGH</strong> (1) gracias al pull-up interno.</li>
+<li>No necesita componentes externos (usa <code>INPUT_PULLUP</code>).</li>
+</ul>
+<h3 id="nodo-1-pir-hc-sr501-deteccion-de-movimiento">Nodo 1 — PIR HC-SR501 (detección de movimiento)</h3>
+<pre><code>                     HC-SR501
+                 ┌──────────────┐
+   VCC ──────────┤ VCC (5V)     │
+   GND ──────────┤ GND          │
+   OUT ──────────┤ D2 (GPIO4)   │  (NodeMCU)
+                 └──────────────┘
+</code></pre>
+<ul>
+<li><strong>VCC</strong> del PIR → <strong>VIN/5V</strong> de la NodeMCU (el HC-SR501 funciona de 5 a 20 V).</li>
+<li><strong>GND</strong> → <strong>GND</strong>.</li>
+<li><strong>OUT</strong> → <strong>D2 (GPIO4)</strong>. La salida del PIR es de ~3.3 V cuando detecta movimiento.</li>
+<li>Ajusta los dos potenciómetros del PIR: <strong>retardo</strong> (tiempo en HIGH) y <strong>sensibilidad</strong>
+  (alcance). Normalmente se deja el jumper en modo <em>re-triggerable</em>.</li>
+<li>Como el firmware usa <code>INPUT_PULLUP</code> y el PIR empuja su salida activa, en reposo
+  suele leer LOW (0) y en detección HIGH (1).</li>
+</ul>
+<h3 id="nodo-2-ldr-nivel-de-luz">Nodo 2 — LDR (nivel de luz)</h3>
+<pre><code>               ┌─────────────┐
+   3V3 ────────┤ LDR         │
+               ├───┐         │
+               │   └─────────┤ A0 (ADC)
+   GND ────────┤ R 10 kΩ     │
+               └─────────────┘
+</code></pre>
+<ul>
+<li>Forma un <strong>divisor de tensión</strong>: un extremo del LDR a <strong>3V3</strong>, el otro extremo al
+  punto medio (que va a <strong>A0</strong>) y, desde ese mismo punto medio, una <strong>resistencia de
+  10 kΩ a GND</strong>.</li>
+<li>A más luz, menor resistencia del LDR → mayor tensión en A0 (valor ADC más alto).</li>
+<li>El LDR no es polarizado; puede ir en cualquier orientación física.</li>
+</ul>
+<h3 id="nodo-3-mq135-calidad-de-aire-gases">Nodo 3 — MQ135 (calidad de aire / gases)</h3>
+<pre><code>                     MQ135 (módulo)
+                 ┌──────────────────────┐
+   VCC ──────────┤ VCC (5V)             │
+   GND ──────────┤ GND                  │
+   AO  ──────────┤ A0 (ADC)  (NodeMCU)  │
+   DO  (opcional)┤ —                    │
+                 └──────────────────────┘
+</code></pre>
+<ul>
+<li><strong>VCC</strong> del módulo MQ135 → <strong>VIN/5V</strong> (el calentador del sensor requiere 5 V y
+  corriente; no alimentarlo desde 3V3).</li>
+<li><strong>GND</strong> → <strong>GND</strong> (tierra común con la NodeMCU).</li>
+<li><strong>AO</strong> (salida analógica) → <strong>A0</strong>.</li>
+<li>El <strong>DO</strong> (salida digital con umbral) no se usa en este proyecto (dejarlo sin conectar).</li>
+<li>⚠️ <strong>Precalentamiento:</strong> el MQ135 necesita <strong>24–48 h</strong> de precalentamiento para lecturas
+  estables; para demos basta con dejar que caliente unos minutos.</li>
+<li>Ajustar el potenciómetro del módulo solo afecta al umbral del comparador (DO), no a AO.</li>
+</ul>
+<h3 id="nodo-4-lm35-tmp36-temperatura-analogica">Nodo 4 — LM35 / TMP36 (temperatura analógica)</h3>
+<pre><code>                LM35 / TMP36 (TO-92)
+              ┌────────────────────┐
+  VIN/5V ─────┤ VCC (pin central)  │   (LM35: 4-20V · TMP36: 2.7-5.5V)
+  A0 ─────────┤ VOUT                │
+  GND ────────┤ GND                 │
+              └────────────────────┘
+</code></pre>
+<ul>
+<li><strong>LM35</strong>: mirando el lado plano, patillas = <code>VCC (izq) · VOUT (centro) · GND (der)</code>.
+  Rango 0–100 °C, salida <strong>10 mV/°C</strong> (0 V = 0 °C).</li>
+<li><strong>TMP36</strong>: pinout distinto = <code>VCC · VOUT · GND</code>, salida <strong>10 mV/°C</strong> con offset de
+  0.5 V (0.5 V = 0 °C, 0.75 V = 25 °C).</li>
+<li><strong>VOUT → A0</strong>. El valor ADC debe convertirse a °C por software (ver <a href="#calibración">Calibración</a>).
+  La red <strong>no</strong> aplica conversión automática: envía el ADC crudo 0–1023.</li>
+<li><strong>Importante:</strong> alimentar el sensor a <strong>3.3 V o 5 V</strong> según el modelo. El ADC del
+  NodeMCU lee hasta ~1 V (o 3.3 V con divisor) — si el sensor entrega más, recorta a 1023.</li>
+</ul>
+<h3 id="nodo-6-ds18b20-temperatura-digital-sonda-de-acero">Nodo 6 — DS18B20 (temperatura digital, sonda de acero)</h3>
+<pre><code>                    DS18B20 (3 cables)
+              ┌───────────────────────────┐
+   3V3 ───────┤ VCC (rojo)                │
+   GND ───────┤ GND (negro)               │
+   D2 (GPIO4)─┤ DATA (amarillo/blanco)    │
+              ├───┬───────────────────────┤
+   3V3 ───────┤   │  R 4.7 kΩ (pull-up)   │
+              └───┴───────────────────────┘
+</code></pre>
+<ul>
+<li><strong>VCC (rojo)</strong> → <strong>3V3</strong>, <strong>GND (negro)</strong> → <strong>GND</strong>, <strong>DATA (amarillo)</strong> → <strong>D2 (GPIO4)</strong>.</li>
+<li>Colocar una <strong>resistencia de pull-up de 4.7 kΩ entre DATA y 3V3</strong> (indispensable para
+  OneWire). Muchas sondas ya la traen integrada en el cable.</li>
+<li>El firmware usa librerías <strong>OneWire</strong> + <strong>DallasTemperature</strong> y envía la temperatura
+  real en °C (ya convertida), a diferencia de los nodos analógicos.</li>
+<li>La lectura bloquea ~750 ms (resolución 12 bits); el Bridge tiene timeout de 2000 ms
+  para dar margen.</li>
+</ul>
+<h3 id="nodo-7-gy-906-mlx90614-termometro-ir-sin-contacto">Nodo 7 — GY-906 / MLX90614 (termómetro IR sin contacto)</h3>
+<pre><code>                    GY-906 (MLX90614)
+              ┌─────────────────────────────┐
+   3V3 ───────┤ VIN (VCC)                   │
+   GND ───────┤ GND                         │
+   D2 (GPIO4)─┤ SDA                         │   (NodeMCU v3)
+   D1 (GPIO5)─┤ SCL                         │
+              └─────────────────────────────┘
+</code></pre>
+<ul>
+<li><strong>VIN</strong> → <strong>3V3</strong> (o <strong>5V/VIN</strong>; el módulo GY-906 trae un regulador de 3.3 V y
+  <em>pull-ups</em> I2C de 4.7 kΩ integrados).</li>
+<li><strong>GND</strong> → <strong>GND</strong> (tierra común).</li>
+<li><strong>SDA</strong> → <strong>D2 (GPIO4)</strong> y <strong>SCL</strong> → <strong>D1 (GPIO5)</strong>: son los pines I2C por defecto del
+  NodeMCU (<code>Wire.begin()</code> sin argumentos).</li>
+<li>El sensor se alimenta y se consulta por I2C en la dirección <strong>0x5A</strong> (por defecto).</li>
+<li>El firmware usa la librería <strong>Adafruit MLX90614</strong> y envía <strong>dos</strong> temperaturas:
+  la del <strong>objeto</strong> apuntado (<code>obj_temp</code>) y la <strong>ambiente</strong> (<code>amb_temp</code>).</li>
+<li>⚠️ <strong>I2C a 3.3 V:</strong> el bus debe quedar a nivel lógico de 3.3 V (el GY-906 ya se
+  encarga de esto con su regulador y <em>pull-ups</em>). No añadas <em>pull-ups</em> externos a 5 V.</li>
+</ul>
+<h3 id="nodo-8-gy-61-adxl335-acelerometro-clasificacion-de-vibracion">Nodo 8 — GY-61 / ADXL335 (acelerómetro, clasificación de vibración)</h3>
+<pre><code>                    GY-61 (ADXL335)
+              ┌─────────────────────────────┐
+   3V3 ───────┤ VCC                          │
+   GND ───────┤ GND                          │
+   A0  ───────┤ X_OUT                        │   (NodeMCU v3)
+              │ Y_OUT  ── (no usado)         │
+              │ Z_OUT  ── (no usado)         │
+              └─────────────────────────────┘
+</code></pre>
+<ul>
+<li><strong>VCC</strong> → <strong>3V3</strong> (el ADXL335 está diseñado para alimentarse a 3.3 V; algunos módulos
+  GY-61 traen regulador y aceptan 5 V en <code>VCC</code>/<code>VIN</code>, pero lo seguro es usar 3.3 V).</li>
+<li><strong>GND</strong> → <strong>GND</strong> (tierra común).</li>
+<li><strong>X_OUT</strong> → <strong>A0</strong>: salida analógica del eje X. En reposo (1 g sobre el eje vertical
+  correspondiente) la salida ronda la <strong>mitad de escala</strong> (~1.65 V → ADC ≈ 512 con el
+  divisor de la NodeMCU).</li>
+<li><strong>Y_OUT</strong> y <strong>Z_OUT</strong> se dejan sin conectar (el ESP8266 solo tiene un ADC).</li>
+<li><strong>Conexiones opcionales del módulo:</strong> algunos GY-61 traen <code>ST</code> (self-test) y pines
+  extra; en este proyecto se dejan sin conectar.</li>
+</ul>
+<h3 id="resumen-visual-de-la-red">Resumen visual de la red</h3>
+<pre><code>                    ┌──────────────────────┐
+                    │   BRIDGE (maestro)   │  Serial → PC (115200)
+                    │   NodeMCU v3         │
+                    └──────────┬───────────┘
+                               │  ESP-NOW (802.11, sin AP)
+         ┌──────────┬──────────┼──────────┬──────────┬──────────┬──────────┬──────────┐
+         │          │          │          │          │          │          │          │
+    ┌────┴───┐ ┌────┴───┐ ┌────┴───┐ ┌────┴───┐ ┌────┴───┐ ┌────┴───┐ ┌────┴───┐ ┌────┴───┐
+    │ Nodo 0 │ │ Nodo 1 │ │ Nodo 2 │ │ Nodo 3 │ │ Nodo 4 │ │ Nodo 6 │ │ Nodo 7 │ │ Nodo 8 │
+    │ Reed   │ │ PIR    │ │ LDR    │ │ MQ135  │ │ LM35   │ │ DS18B20│ │ GY-906 │ │ GY-61  │
+    └────────┘ └────────┘ └────────┘ └────────┘ └────────┘ └────────┘ └────────┘ └────────┘
+</code></pre>
+<hr/>
+<h2 id="compilacion-y-carga">Compilación y carga</h2>
+<blockquote>
+<p>Se usa <strong>arduino-cli</strong>. Todos los comandos se ejecutan desde la raíz del proyecto
+(donde está <code>README.md</code>) o desde la carpeta de cada firmware.</p>
+</blockquote>
+<h3 id="1-instalar-arduino-cli-si-no-esta-instalado">1. Instalar arduino-cli (si no está instalado)</h3>
+<pre><code class="language-bash"># Instalar arduino-cli
+curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
 
-<section class="section tight"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">03 — Cómo se usa</div><h2>De la carpeta a la práctica.</h2></div>
-  <div class="timeline"><div class="step reveal"><div class="step-n">01</div><h4>Cargá el bridge</h4><p>El nodo central recibe y reenvía.</p></div><div class="step reveal"><div class="step-n">02</div><h4>Cargá los nodos</h4><p>Cada sensor tiene su sketch y su dirección.</p></div><div class="step reveal"><div class="step-n">03</div><h4>Abrí la GUI</h4><p>Python muestra los datos sin depender de Internet.</p></div><div class="step reveal"><div class="step-n">04</div><h4>Probá el enlace largo</h4><p>La variante LoRaWAN requiere gateway y credenciales.</p></div></div>
-</div></section>
+# Verificar instalación
+arduino-cli version
+</code></pre>
+<h3 id="2-instalar-el-core-de-esp8266">2. Instalar el core de ESP8266</h3>
+<pre><code class="language-bash">arduino-cli core update-index
+arduino-cli core install esp8266:esp8266
+</code></pre>
+<h3 id="3-instalar-las-librerias-necesarias-para-los-nodos-6-y-7">3. Instalar las librerías (necesarias para los nodos 6 y 7)</h3>
+<pre><code class="language-bash"># Nodo 6 (DS18B20)
+arduino-cli lib install OneWire
+arduino-cli lib install "DallasTemperature"
 
-<section class="section tight"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">04 — Decisiones</div><h2>Lo que lo hace distinto</h2></div>
-  <div class="features"><div class="feature reveal"><h4>Demo transportable</h4><p>Pensada para mostrar en terreno.</p></div><div class="feature reveal"><h4>Nueve nodos</h4><p>Sensores distintos en una sola red.</p></div><div class="feature reveal"><h4>GUI local</h4><p>Python para ver el estado en el computador.</p></div><div class="feature reveal"><h4>Dos radios</h4><p>ESP-NOW y LoRaWAN en el mismo flujo.</p></div><div class="feature reveal"><h4>Red mixta</h4><p>ESP8266 y ESP32 conviven.</p></div><div class="feature reveal"><h4>Sin nube</h4><p>La demo funciona en red local.</p></div></div>
-</div></section>
+# Nodo 7 (GY-906 / MLX90614)
+arduino-cli lib install "Adafruit MLX90614 Library"
+arduino-cli lib install "Adafruit BusIO"
+</code></pre>
+<blockquote>
+<p><code>ESP8266WiFi.h</code> y <code>espnow.h</code> ya vienen incluidas en el core <code>esp8266:esp8266</code>, no
+requieren instalación adicional. <code>Wire.h</code> (I2C) también forma parte del core.
+<strong>El nodo 8 (GY-61) no usa librerías externas</strong>: solo <code>analogRead()</code> y el core ESP8266.</p>
+</blockquote>
+<h3 id="4-compilar-cada-firmware">4. Compilar cada firmware</h3>
+<pre><code class="language-bash"># Bridge (maestro)
+arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 firmware_bridge
 
-<section class="section tight" id="stack"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">05 — Stack y arranque</div><h2>Con qué está construido</h2></div>
-  <div class="stack-grid">
-    <div class="reveal"><div class="chips"><span class="chip">ESP8266</span><span class="chip">ESP32</span><span class="chip">ESP-NOW</span><span class="chip">LoRaWAN</span><span class="chip">Python</span><span class="chip">Tkinter</span></div><div class="note"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Las credenciales LoRaWAN y WiFi de la demo no se incluyen. La GUI requiere Python y las dependencias de su carpeta.</span></div></div>
-    <div class="terminal reveal"><div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><pre>git clone https://github.com/jmadasme/espnow-demos.git
-cd espnow-demos/versions/espNowDemo
-ls
-# cargá bridge y nodos; luego ejecutá la GUI de Python</pre></div>
-  </div>
-</div></section>
+# Nodos universales (0-4)
+arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 firmware_nodo_0
+arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 firmware_nodo_1
+arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 firmware_nodo_2
+arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 firmware_nodo_3
+arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 firmware_nodo_4
 
-<section class="section tight" id="docs"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">06 — Documentación</div><h2>Para usar y para entender.</h2><p class="section-sub">Cada documento está en el repositorio, versionado junto al código.</p></div>
-  <div class="docs"><a class="doc reveal" href="https://github.com/jmadasme/espnow-demos/blob/main/docs/datasheet.md" target="_blank" rel="noopener"><span class="tag">DATASHEET</span><h4>Manual de operación</h4><p>Instalación, configuración, uso y diagnóstico.</p></a><a class="doc reveal" href="https://github.com/jmadasme/espnow-demos/blob/main/docs/developer.md" target="_blank" rel="noopener"><span class="tag">DEVELOPER</span><h4>Guía de código</h4><p>Arquitectura, módulos, contratos y extensión.</p></a><a class="doc reveal" href="https://github.com/jmadasme/espnow-demos/blob/main/docs/REFERENCES.md" target="_blank" rel="noopener"><span class="tag">REFERENCES</span><h4>Referencias</h4><p>Estándares, librerías y fuentes oficiales.</p></a></div>
-</div></section>
+# Nodo 6 (DS18B20)
+arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 firmware_nodo_6
 
-<section class="section tight"><div class="wrap"><div class="note reveal"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span><strong>Preservación:</strong> las versiones se copiaron sin <code>.git</code>, <code>node_modules</code>, entornos virtuales, compilados ni bases de datos. Los tokens y claves detectados fueron redactados; las plantillas <code>.example</code> se conservan. Las limitaciones conocidas están en la documentación, no escondidas.</span></div></div></section>
+# Nodo 7 (GY-906)
+arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 firmware_nodo_7
 
+# Nodo 8 (GY-61 / acelerómetro)
+arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 firmware_nodo_8
+</code></pre>
+<h3 id="5-cargar-en-cada-placa">5. Cargar en cada placa</h3>
+<p>Conecta la placa por USB, identifica el puerto (<code>arduino-cli board list</code>) y sube:</p>
+<pre><code class="language-bash"># Ejemplo: /dev/ttyUSB0
+arduino-cli upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 firmware_bridge
+arduino-cli upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 firmware_nodo_0
+# ... etc. (nodos 1-4, 6, 7 y 8 con su carpeta correspondiente)
+</code></pre>
+<blockquote>
+<p>💡 <strong>Tip:</strong> compila y sube un nodo a la vez. <strong>No subas el firmware de un nodo a dos
+placas con el mismo ID</strong>: colisionarían. Cada carpeta ya trae su <code>NODE_ID</code> correcto.</p>
+</blockquote>
+<h3 id="6-abrir-el-monitor-serial">6. Abrir el monitor Serial</h3>
+<pre><code class="language-bash">arduino-cli monitor -p /dev/ttyUSB0 -c baudrate=115200
+</code></pre>
+<hr/>
+<h2 id="ejemplos-de-uso">Ejemplos de uso</h2>
+<h3 id="arranque-del-bridge">Arranque del Bridge</h3>
+<pre><code>============================================
+  ESP8266 MAESTRO - Red ESP-NOW (Bridge)
+  v1.1-fix1 - Sensores digital + ADC
+============================================
+
+MAC del ESP8266 maestro (bridge): 48:3F:DA:05:86:36
+
+  MAC bridge: 48:3F:DA:05:86:36
+  * Slot Nodo 5 reservado para el bridge (self)
+
+[OK] ESP-NOW inicializado correctamente
+
+Iniciando interrogacion de nodos...
+Intervalo entre polls: 3000 ms
+Timeout de respuesta:  2000 ms
+----------------------------------------
+</code></pre>
+<h3 id="auto-polling-respuesta-de-un-nodo-universal">Auto-polling (respuesta de un nodo universal)</h3>
+<pre><code>[ENVIO] Request broadcast para nodo 0
+----------------------------------------
+RESPUESTA RECIBIDA - Nodo #0
+  MAC                 : 84:F3:EB:7C:99:1E
+  Estado digital (D2) : 1  (HIGH)
+  Valor ADC (A0)      : 512 (0-1023)
+  Contador correlativo: 3
+  Tiempo activo nodo  : 15230 ms (15 s)
+  RTT                 : 12 ms
+----------------------------------------
+</code></pre>
+<h3 id="respuesta-del-nodo-6-ds18b20">Respuesta del nodo 6 (DS18B20)</h3>
+<pre><code>[ENVIO] Request -&gt; Nodo 6 [48:3F:DA:05:FC:85]
+----------------------------------------
+RESPUESTA RECIBIDA - Nodo #6
+  MAC                 : 48:3F:DA:05:FC:85
+  Temperatura (DS18B20): 24.5 C
+  Humedad              : N/A
+  Contador correlativo: 7
+  Tiempo activo nodo  : 20000 ms (20 s)
+  RTT                 : 780 ms
+----------------------------------------
+</code></pre>
+<h3 id="respuesta-del-nodo-7-gy-906-mlx90614">Respuesta del nodo 7 (GY-906 / MLX90614)</h3>
+<pre><code>[ENVIO] Request -&gt; Nodo 7 [E0:98:06:23:BA:E9]
+----------------------------------------
+RESPUESTA RECIBIDA - Nodo #7
+  MAC                 : E0:98:06:23:BA:E9
+  Temp. objeto (IR)   : 36.7 C
+  Temp. ambiente      : 24.1 C
+  Contador correlativo: 4
+  Tiempo activo nodo  : 12500 ms (12 s)
+  RTT                 : 95 ms
+----------------------------------------
+</code></pre>
+<blockquote>
+<p><code>Temp. objeto (IR)</code> es la temperatura del <strong>objeto/superficie</strong> a la que apunta el
+sensor (sin contacto). <code>Temp. ambiente</code> es la temperatura del propio sensor. Si el
+I2C falla, aparecerá <code>ERROR LECTURA</code> en ambos campos.</p>
+</blockquote>
+<h3 id="respuesta-del-nodo-8-gy-61-adxl335-vibracion">Respuesta del nodo 8 (GY-61 / ADXL335) — vibración</h3>
+<pre><code>[ENVIO] Request -&gt; Nodo 8 [48:3F:DA:05:9C:C8]
+----------------------------------------
+RESPUESTA RECIBIDA - Nodo #8
+  MAC                 : 48:3F:DA:05:9C:C8
+  Acel. X (A0)        : 512
+  Rango vibracion     : 8
+  Estado              : REPOSO
+  Contador correlativo: 3
+  Tiempo activo nodo  : 15400 ms (15 s)
+  RTT                 : 15 ms
+----------------------------------------
+</code></pre>
+<p>Y cuando el sensor vibra (p. ej. golpeando suavemente la maleta):</p>
+<pre><code>----------------------------------------
+RESPUESTA RECIBIDA - Nodo #8
+  Acel. X (A0)        : 520
+  Rango vibracion     : 132
+  Estado              : VIBRACION ALTA
+  ...
+----------------------------------------
+</code></pre>
+<blockquote>
+<p><code>Acel. X (A0)</code> es el promedio de las últimas 50 lecturas del eje X. <code>Rango vibracion</code>
+es <code>max − min</code> de esa ventana. <code>Estado</code> es la clasificación: <code>REPOSO</code>, <code>VIBRACION
+BAJA</code>, <code>VIBRACION MEDIA</code> o <code>VIBRACION ALTA</code> (ver <a href="#calibración">Calibración</a> para los
+umbrales).</p>
+</blockquote>
+<h3 id="comando-ping-7">Comando <code>ping 7</code></h3>
+<pre><code>&gt; ping 7
+[CMD] Preguntando a Nodo 7...
+[ENVIO] Request -&gt; Nodo 7 [E0:98:06:23:BA:E9]
+----------------------------------------
+RESPUESTA RECIBIDA - Nodo #7
+  Temp. objeto (IR)   : 36.7 C
+  Temp. ambiente      : 24.1 C
+  ...
+----------------------------------------
+</code></pre>
+<h3 id="comando-list">Comando <code>list</code></h3>
+<pre><code>=== TABLA DE NODOS ===
+  Nodo 0: CONOCIDO [84:F3:EB:7C:99:1E]
+  Nodo 1: CONOCIDO [80:7D:3A:2B:E3:59]
+  Nodo 2: DESCONOCIDO [00:00:00:00:00:00]
+  Nodo 3: CONOCIDO [50:02:91:DE:0D:7B]
+  Nodo 4: DESCONOCIDO [00:00:00:00:00:00]
+  Nodo 5: BRIDGE [48:3F:DA:05:86:36]
+  Nodo 6: CONOCIDO [48:3F:DA:05:FC:85]
+  Nodo 7: CONOCIDO [E0:98:06:23:BA:E9]
+  Nodo 8: CONOCIDO [48:3F:DA:05:9C:C8]
+========================
+</code></pre>
+<h3 id="comando-stats">Comando <code>stats</code></h3>
+<pre><code>=== ESTADISTICAS ===
+  Requests enviados:  142
+  Respuestas OK:      138
+  Timeouts:           4
+  Tasa de exito:      97%
+  Nodos conocidos:
+    Nodo 0: CONOCIDO [84:F3:EB:7C:99:1E]
+    ...
+====================
+</code></pre>
+<h3 id="comando-ping-dirigido-y-ping-all">Comando <code>ping</code> dirigido y <code>ping all</code></h3>
+<pre><code>&gt; ping 3
+[CMD] Preguntando a Nodo 3...
+[ENVIO] Request -&gt; Nodo 3 [50:02:91:DE:0D:7B]
+----------------------------------------
+RESPUESTA RECIBIDA - Nodo #3
+  ...
+----------------------------------------
+
+&gt; ping all
+[CMD] Preguntando a TODOS los nodos...
+</code></pre>
+<h3 id="timeout-nodo-apagado-o-fuera-de-rango">Timeout (nodo apagado o fuera de rango)</h3>
+<pre><code>[ENVIO] Request broadcast para nodo 2
+[TIMEOUT] Nodo 2 - No se recibio respuesta (2000 ms)
+</code></pre>
+<hr/>
+<h2 id="calibracion">Calibración</h2>
+<h3 id="nodos-analogicos-01023">Nodos analógicos (0–1023)</h3>
+<p>Los nodos universales <strong>no convierten</strong> el ADC a unidades físicas: envían el valor crudo
+(0–1023). La conversión se puede hacer en el lado del PC o en una futura versión del
+firmware. Fórmulas útiles:</p>
+<ul>
+<li><strong>LM35</strong> (0.5 V = 0 °C no aplica; salida 10 mV/°C):
+  <code>V = adc * Vref / 1023; tempC = V * 100</code>. Con Vref = 1.0 V: <code>tempC = adc * 100 / 1023</code>.</li>
+<li><strong>TMP36</strong> (offset 0.5 V): <code>V = adc * Vref / 1023; tempC = (V - 0.5) * 100</code>.</li>
+<li><strong>LDR / MQ135</strong>: valores relativos; calibrar midiendo el ADC con luz/aire conocidos y
+  estableciendo umbrales propios. El MQ135 requiere curva logarítmica para ppm.</li>
+</ul>
+<h3 id="nodo-6-ds18b20">Nodo 6 (DS18B20)</h3>
+<p>No requiere calibración: el DS18B20 entrega temperatura digital ya calibrada en fábrica.
+El firmware la convierte a <code>temp_x10</code> (×10) automáticamente.</p>
+<h3 id="nodo-7-gy-906-mlx90614">Nodo 7 (GY-906 / MLX90614)</h3>
+<p>No requiere calibración: el MLX90614 entrega temperatura IR ya calibrada en fábrica. El
+firmware convierte a <code>obj_temp_x10</code> y <code>amb_temp_x10</code> (×10) automáticamente. Para medidas
+precisas, apunta el sensor al objeto a <strong>corta distancia</strong> (el campo de visión FOV es
+~90°; la zona medida crece con la distancia) y evita reflejos de superficies brillantes.</p>
+<h3 id="nodo-8-gy-61-adxl335-umbrales-de-vibracion">Nodo 8 (GY-61 / ADXL335) — umbrales de vibración</h3>
+<p>El nodo 8 no mide aceleración en "g" directamente: muestrea el eje X cada 10 ms
+(mantiene una <strong>ventana de 50 muestras</strong> ≈ 500 ms) y calcula el <strong>rango</strong> (<code>max − min</code>)
+de la ventana. Ese rango es el que se compara contra <strong>tres umbrales calibrables</strong>
+(<code>#define</code> en <code>firmware_nodo_8.ino</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th><code>vib_level</code></th>
+<th>Condición (rango = max−min)</th>
+<th>Umbral</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REPOSO</td>
+<td>0</td>
+<td><code>rango &lt; VIB_TH_REST</code></td>
+<td><code>&lt; 12</code></td>
+</tr>
+<tr>
+<td>VIBRACIÓN BAJA</td>
+<td>1</td>
+<td><code>VIB_TH_REST ≤ rango &lt; VIB_TH_LOW</code></td>
+<td><code>12–39</code></td>
+</tr>
+<tr>
+<td>VIBRACIÓN MEDIA</td>
+<td>2</td>
+<td><code>VIB_TH_LOW ≤ rango &lt; VIB_TH_MED</code></td>
+<td><code>40–99</code></td>
+</tr>
+<tr>
+<td>VIBRACIÓN ALTA</td>
+<td>3</td>
+<td><code>rango ≥ VIB_TH_MED</code></td>
+<td><code>≥ 100</code></td>
+</tr>
+</tbody>
+</table>
+<p>Los umbrales por defecto son <code>VIB_TH_REST=12</code>, <code>VIB_TH_LOW=40</code>, <code>VIB_TH_MED=100</code>
+(valores de ADC, 0–1023). Para calibrarlos:</p>
+<ol>
+<li>Con el sensor <strong>en reposo</strong> sobre la mesa, observa el <code>Rango vibracion</code> reportado por
+   el Bridge (<code>ping 8</code>). El ruido eléctrico típico del ADC produce un rango pequeño
+   (por eso el umbral de reposo es 12). Si en reposo reporta rangos mayores, sube
+   <code>VIB_TH_REST</code> por encima del ruido observado.</li>
+<li><strong>Golpea suavemente</strong> la maleta para simular vibración baja/media y anota el rango.</li>
+<li>Ajusta <code>VIB_TH_LOW</code> y <code>VIB_TH_MED</code> entre los valores observados de cada categoría
+   (p. ej. media ≈ 40–100, alta &gt; 100).</li>
+<li>Recompila y recarga el nodo 8.</li>
+</ol>
+<blockquote>
+<p>El ADXL335 tiene una sensibilidad nominal de <strong>~300 mV/g</strong> y fondo de escala <strong>±3 g</strong>.
+Con el divisor de la NodeMCU, <code>accel_x</code> cambia ~100 cuentas de ADC por cada "g".
+En reposo con el eje X horizontal, <code>accel_x</code> ≈ 512 (mitad de escala, 0 g).</p>
+</blockquote>
+<h3 id="referencia-de-tension-del-adc">Referencia de tensión del ADC</h3>
+<p>El ADC del ESP8266 usa <code>Vref</code> nominal de 1.0 V. Las placas NodeMCU v3 suelen llevar un
+divisor que mapea 0–3.3 V → 0–1.0 V, de modo que 1023 ≈ 3.3 V. Si tus lecturas analógicas
+están saturadas (siempre 1023), revisa el divisor de tu placa o añade un divisor externo.</p>
+<hr/>
+<h2 id="advertencias-y-precauciones">Advertencias y precauciones</h2>
+<ul>
+<li>⚠️ <strong>Voltajes de GPIO: solo 3.3 V.</strong> Los GPIO del ESP8266 <strong>no toleran 5 V</strong>. No
+  conectes salidas de 5 V directamente a pines GPIO; usa divisor resistivo si el sensor
+  entrega 5 V.</li>
+<li>⚠️ <strong>Pines de arranque:</strong> en el ESP8266, GPIO0 (D3), GPIO2 (D4) y GPIO15 (D8) tienen
+  estados especiales durante el arranque. <strong>GPIO2/D4 debe estar en HIGH al arrancar</strong>;
+  por eso es el pin del LED (con LED apagado = HIGH) y no se debe cargar con sensores
+  en los nodos universales. El nodo 6 deja D4 libre a propósito.</li>
+<li>⚠️ <strong>GPIO1 (TX) y GPIO3 (RX):</strong> los usa el Serial; no los uses para sensores.</li>
+<li>⚠️ <strong>GPIO2/D4 = LED_BUILTIN en los nodos universales:</strong> si lo usas para otra cosa,
+  perderás el heartbeat. Y recuerda que el LED es <strong>activo en LOW</strong> (enciende con <code>LOW</code>).</li>
+<li>⚠️ <strong>ADC (A0):</strong> rango 0–1.0 V nativo. No excedas la tensión de entrada o dañarás el
+  pin. Con divisor de la NodeMCU, el máximo práctico es 3.3 V.</li>
+<li>⚠️ <strong>Alimentación de sensores:</strong> el MQ135 y el PIR requieren <strong>5 V</strong> (usar VIN/5V).
+  El DS18B20 y el LDR pueden ir a 3V3. Nunca alimentes el MQ135 desde 3V3.</li>
+<li>⚠️ <strong>Resistencia pull-up del DS18B20:</strong> imprescindible (4.7 kΩ entre DATA y 3V3). Sin
+  ella, el sensor reportará error de lectura (<code>Temperatura: ERROR LECTURA</code>).</li>
+<li>⚠️ <strong>I2C a 3.3 V (nodo 7):</strong> el bus I2C del GY-906 debe operar a <strong>3.3 V</strong>. El módulo
+  ya trae regulador y <em>pull-ups</em> de 4.7 kΩ a 3.3 V; <strong>no</strong> añadas <em>pull-ups</em> a 5 V ni
+  conectes SDA/SCL a lógica de 5 V, o dañarás los GPIO del ESP8266.</li>
+<li>⚠️ <strong>Alimentación del GY-61 a 3.3 V (nodo 8):</strong> el ADXL335 está especificado para
+  alimentarse a <strong>3.3 V</strong>. Alimenta el módulo desde el pin <strong>3V3</strong>, no desde 5 V, salvo
+  que tu módulo GY-61 documente explícitamente un regulador onboard que acepte 5 V.</li>
+<li>⚠️ <strong>Solo un ADC (nodo 8):</strong> el ESP8266 tiene un único ADC (A0); por eso se monitoriza
+  solo el <strong>eje X</strong> del GY-61. La salida del ADXL335 en reposo es ~1.65 V (la mitad de
+  escala); si usas un módulo que entrega la señal desplazada, <code>accel_x</code> será distinto de
+  512 en reposo (recalibra los umbrales si hace falta).</li>
+<li>⚠️ <strong>Salida analógica del ADXL335:</strong> la salida X_OUT puede variar de 0 a 3.3 V. No
+  excedas el fondo de escala del ADC de la NodeMCU (0–3.3 V con divisor, 0–1 V nativo).</li>
+<li>⚠️ <strong>Precalentamiento MQ135:</strong> espera unos minutos (idealmente 24–48 h) para lecturas
+  estables del calentador.</li>
+<li>⚠️ <strong>No duplicar IDs:</strong> cada nodo debe tener un <code>NODE_ID</code> único (0–4, 6–8). Dos nodos con
+  el mismo ID responderían simultáneamente y corromperían la tabla del Bridge.</li>
+<li>⚠️ <strong>ESP-NOW no cifra:</strong> los mensajes viajan en claro. Adecuado para demos, no para
+  datos sensibles.</li>
+<li>⚠️ <strong>Alcance:</strong> ESP-NOW en ESP8266 alcanza típicamente decenas de metros en interiores
+  (depende de obstáculos). Un <em>timeout</em> suele significar nodo apagado o fuera de rango.</li>
+<li>⚠️ <strong>Polaridad del DS18B20:</strong> invertir VCC/GND puede dañar el sensor. Verifica
+  rojo=VCC, negro=GND, amarillo=DATA.</li>
+</ul></div></div></section>
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Lo que no funcionó</div><h2>Los tropiezos, documentados</h2><p class="section-sub">Las primeras versiones existen para que estos errores no se repitan: cada una dejó una decisión de diseño verificable.</p></div><div class="fail-grid reveal"><div class="fail"><div class="v">espNowDemo</div><h3>Timeout con underflow de millis()</h3><p>El bridge calculaba el timeout con el valor de millis() capturado al inicio del loop. Si el request se enviaba en esa misma iteración, el instante de envío quedaba por delante del reloj y la resta desbordaba. Se corrigió leyendo millis() fresco al comparar, y el detalle quedó en developer.</p></div><div class="fail"><div class="v">espNowDemoLoRaWAN1.1</div><h3>Timer del ASR6502 poco fiable</h3><p>El puente LoRaWAN usaba el temporizador nativo del CubeCell para el sleep de RadioLib, pero en esta placa y escenario no era confiable y afectaba las ventanas de radio. Se sustituyó por millis() con un scanGuard de 200, el mismo workaround que aparece en el resto del catálogo CubeCell.</p></div><div class="fail"><div class="v">red_espnow_8266_32</div><h3>Variante conservada sin README</h3><p>La carpeta reúne firmware para un maestro ESP8266, otro ESP32 y un nodo, pero no incluye README ni instrucciones de compilación, topología o cableado. El catálogo la conserva tal cual y advierte que no se documentó; reproducirla exige leer el código y deducir la red.</p></div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Ficha de evaluación</div><h2>Cómo se mide este proyecto</h2><p class="section-sub">Seis criterios con la misma escala en todo el catálogo, para comparar sin marketing.</p></div><div class="rating-head reveal"><div class="rating-avg">3.7<small>/5</small></div><div><strong>Madurez global</strong><p>Demostración sólida y portable de ESP-NOW con nueve nodos y GUI local; adecuada para exhibición y docencia, no para un uso en producción sin cifrado ni watchdog.</p></div></div><div class="rating reveal"><div class="rating-row"><div class="rating-name">Madurez</div><div class="rating-bar"><i style="width:60%"></i></div><div class="rating-score">3/5</div><div class="rating-note">Demo funcional con nueve nodos y GUI, sin tests ni watchdog; la variante LoRaWAN y la mixta quedan como exploraciones.</div></div><div class="rating-row"><div class="rating-name">Reproducibilidad</div><div class="rating-bar"><i style="width:60%"></i></div><div class="rating-score">3/5</div><div class="rating-note">Requiere nueve NodeMCU, sensores concretos, PyQt6 y credenciales no incluidas; el cableado está documentado.</div></div><div class="rating-row"><div class="rating-name">Documentación</div><div class="rating-bar"><i style="width:80%"></i></div><div class="rating-score">4/5</div><div class="rating-note">Datasheet y developer cubren protocolo y GUI; red_espnow_8266_32 carece de README y baja el conjunto.</div></div><div class="rating-row"><div class="rating-name">Honestidad de límites</div><div class="rating-bar"><i style="width:80%"></i></div><div class="rating-score">4/5</div><div class="rating-note">Declara ausencia de cifrado, EEPROM y watchdog, y marca la variante sin documentar; no oculta los huecos.</div></div><div class="rating-row"><div class="rating-name">Valor demostrativo</div><div class="rating-bar"><i style="width:100%"></i></div><div class="rating-score">5/5</div><div class="rating-note">Una maleta con nueve nodos y visualización local es una demostración completa y comprensible sin nube.</div></div><div class="rating-row"><div class="rating-name">Facilidad de despliegue</div><div class="rating-bar"><i style="width:60%"></i></div><div class="rating-score">3/5</div><div class="rating-note">Hay que flashear varios firmwares y abrir la GUI; funciona, pero no es un instalador ni un procedimiento único.</div></div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Preguntas típicas</div><h2>Lo que suelen preguntar</h2></div><div class="faq reveal"><details><summary>¿Qué demo muestra mejor el sistema?</summary><p>espNowDemo: es la más completa y tiene GUI.</p></details><details><summary>¿Necesito gateway LoRaWAN?</summary><p>Solo para la variante LoRaWAN. ESP-NOW funciona sin infraestructura.</p></details><details><summary>¿Los nodos son iguales?</summary><p>No; cada uno tiene su sensor y su sketch.</p></details><details><summary>¿Por qué red_espnow no tiene README?</summary><p>Se conserva tal como estaba. El código y los comentarios son la documentación disponible.</p></details><details><summary>¿Puedo agregar un sensor?</summary><p>Sí, copiando un nodo y asignando una dirección MAC distinta.</p></details></div></div></section>
 <section class="cta"><div class="wrap"><div class="cta-box reveal">
   <div class="kicker">Siguiente paso</div><h2>¿Te animás?</h2>
   <p>Usá esta familia como base para esp-now demos. Está documentada para que puedas entenderla, ejecutarla y continuarla sin adivinar.</p>

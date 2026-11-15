@@ -35,6 +35,60 @@ ls
 
 Las credenciales LoRaWAN y WiFi de la demo no se incluyen. La GUI requiere Python y las dependencias de su carpeta.
 
+<!-- ficha -->
+## Ficha de evaluación
+
+**Madurez global: 3.7/5**
+
+| Criterio | Nota | Evidencia |
+|---|---:|---|
+| Madurez | 3/5 | Demo funcional con nueve nodos y GUI, sin tests ni watchdog; la variante LoRaWAN y la mixta quedan como exploraciones. |
+| Reproducibilidad | 3/5 | Requiere nueve NodeMCU, sensores concretos, PyQt6 y credenciales no incluidas; el cableado está documentado. |
+| Documentación | 4/5 | Datasheet y developer cubren protocolo y GUI; red_espnow_8266_32 carece de README y baja el conjunto. |
+| Honestidad de límites | 4/5 | Declara ausencia de cifrado, EEPROM y watchdog, y marca la variante sin documentar; no oculta los huecos. |
+| Valor demostrativo | 5/5 | Una maleta con nueve nodos y visualización local es una demostración completa y comprensible sin nube. |
+| Facilidad de despliegue | 3/5 | Hay que flashear varios firmwares y abrir la GUI; funciona, pero no es un instalador ni un procedimiento único. |
+
+Demostración sólida y portable de ESP-NOW con nueve nodos y GUI local; adecuada para exhibición y docencia, no para un uso en producción sin cifrado ni watchdog.
+
+## Lo que no funcionó
+
+### espNowDemo — Timeout con underflow de millis()
+
+El bridge calculaba el timeout con el valor de millis() capturado al inicio del loop. Si el request se enviaba en esa misma iteración, el instante de envío quedaba por delante del reloj y la resta desbordaba. Se corrigió leyendo millis() fresco al comparar, y el detalle quedó en developer.
+
+### espNowDemoLoRaWAN1.1 — Timer del ASR6502 poco fiable
+
+El puente LoRaWAN usaba el temporizador nativo del CubeCell para el sleep de RadioLib, pero en esta placa y escenario no era confiable y afectaba las ventanas de radio. Se sustituyó por millis() con un scanGuard de 200, el mismo workaround que aparece en el resto del catálogo CubeCell.
+
+### red_espnow_8266_32 — Variante conservada sin README
+
+La carpeta reúne firmware para un maestro ESP8266, otro ESP32 y un nodo, pero no incluye README ni instrucciones de compilación, topología o cableado. El catálogo la conserva tal cual y advierte que no se documentó; reproducirla exige leer el código y deducir la red.
+
+## Preguntas típicas
+
+**¿Qué demo muestra mejor el sistema?**
+
+espNowDemo: es la más completa y tiene GUI.
+
+**¿Necesito gateway LoRaWAN?**
+
+Solo para la variante LoRaWAN. ESP-NOW funciona sin infraestructura.
+
+**¿Los nodos son iguales?**
+
+No; cada uno tiene su sensor y su sketch.
+
+**¿Por qué red_espnow no tiene README?**
+
+Se conserva tal como estaba. El código y los comentarios son la documentación disponible.
+
+**¿Puedo agregar un sensor?**
+
+Sí, copiando un nodo y asignando una dirección MAC distinta.
+
+<!-- /ficha -->
+
 ## Documentación
 
 - [`docs/datasheet.md`](docs/datasheet.md) — instalación, operación y límites.
@@ -42,9 +96,9 @@ Las credenciales LoRaWAN y WiFi de la demo no se incluyen. La GUI requiere Pytho
 - [`docs/REFERENCES.md`](docs/REFERENCES.md) — estándares, librerías y fuentes.
 - [`docs/index.html`](docs/index.html) — página del proyecto (GitHub Pages).
 
-## Alcance y honestidad
+## El proyecto en detalle
 
-## espNowDemo — Red de Sensores Inalámbrica ESP-NOW (Demostración / Maleta)
+### espNowDemo — Red de Sensores Inalámbrica ESP-NOW (Demostración / Maleta)
 
 > **Versión:** netEspNow v1.1-fix1 · **Topología:** Estrella · **Plataforma:** ESP8266 (NodeMCU v3 / ESP-12E)
 
