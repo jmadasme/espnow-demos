@@ -252,11 +252,11 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
 </article><article class="version reveal">
   <div class="version-top"><h3>espNowDemoLoRaWAN1.1</h3><span class="count">7 archivos</span></div>
   <p>Dos firmwares que cooperan: ESP-NOW para el tramo local y LoRaWAN para el enlace largo.</p>
-  <a href="https://github.com/jmadasme/espnow-demos/tree/main/versions/espNowDemoLoRaWAN1.1" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <span class="lock" style="color:var(--muted)">🔒 privada</span>
 </article><article class="version reveal">
   <div class="version-top"><h3>red_espnow_8266_32</h3><span class="count">4 archivos</span></div>
   <p>Firmwares maestro y nodo para una red mixta de ESP8266 y ESP32.</p>
-  <a href="https://github.com/jmadasme/espnow-demos/tree/main/versions/red_espnow_8266_32" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <span class="lock" style="color:var(--muted)">🔒 privada</span>
 </article></div>
 </div></section>
 <section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El concepto</div><h2>Qué es y por qué existe</h2></div><div class="rich reveal"><p>espnow-demos agrupa tres demostraciones de ESP-NOW pensadas para funcionar sin la WiFi del lugar ni servicios en la nube. La pieza principal es una red en estrella de nueve nodos ESP8266 —un bridge y ocho sensores— que se consulta desde una interfaz PyQt6 en un portátil; las otras dos versiones exploran un puente LoRaWAN y una red mixta ESP8266/ESP32.</p><p>Está dirigido a quien necesita una demo transportable para feria, aula o sala de reuniones, donde la red del edificio no es confiable. Importa porque muestra el ciclo completo con hardware barato: autodescubrimiento de MAC, tramas binarias compactas, sensores digitales, I2C y analógicos, y una GUI local. También deja a la vista los huecos: sin cifrado, sin watchdog y sin documentación en una de las variantes.</p></div></div></section>
